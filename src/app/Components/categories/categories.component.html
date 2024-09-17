@@ -1,0 +1,21 @@
+<section class="mt-1 mb-4">
+<div class="row g-3">
+    <h2>Category</h2>
+
+
+    @for (product of getcat ; track product._id){
+    <div class="col-md-3 align-items-center " >
+    <div   [routerLink]="['/detailscat' , product._id ] ">
+            <div class="product p-2">
+               <div >
+                <img [src]="product.image" height="350px"  class="w-100" [alt]="product.name">
+               <h3 class="medium  text-main">{{product.name }}</h3>
+             
+            
+               </div>
+               </div>
+           </div>
+        </div>
+    }
+</div>
+</section>
